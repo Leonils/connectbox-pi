@@ -25,6 +25,8 @@ firewall_v4_default_rules:
     - -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
   200 allow ssh:
     - -A INPUT -p tcp --dport ssh -j ACCEPT
+  300 allow ssl:
+    - -A INPUT -p tcp --dport 443 -j ACCEPT
   999 drop everything:
     - -P INPUT DROP
 firewall_v4_group_rules: {}

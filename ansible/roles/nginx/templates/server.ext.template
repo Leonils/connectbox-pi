@@ -1,0 +1,4 @@
+subjectAltName = @alt_names
+extendedKeyUsage = serverAuth
+
+[alt_names]

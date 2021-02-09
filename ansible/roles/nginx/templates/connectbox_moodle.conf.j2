@@ -1,12 +1,15 @@
 
 server {
     listen 80;
+    listen 443 ssl;
 
     root /var/www/moodle/;
     index index.php index.html index.htm;
 
-    server_name your_domain;
-
+    server_name _;
+        ssl_certificate /var/www/certificates/server.cer; #path to cert
+        ssl_certificate_key /var/www/certificates/server.pvk; #path to key
+    
     location / {
         try_files $uri $uri/ =404;
     }

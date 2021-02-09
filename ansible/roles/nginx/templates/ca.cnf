@@ -1,0 +1,18 @@
+[ req ]
+distinguished_name  = req_distinguished_name
+x509_extensions     = root_ca
+
+[ req_distinguished_name ]
+countryName             = UK
+countryName_min         = 2
+countryName_max         = 2
+stateOrProvinceName     = State
+localityName            = Brisbane
+organizationName        = Relay Trust
+commonName              = www.relaytrust.org
+commonName_max          = 64
+emailAddress            = info@relautrust.org
+emailAddress_max        = 64
+
+[ root_ca ]
+basicConstraints            = critical, CA:true
