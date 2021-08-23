@@ -3,4 +3,4 @@ connectbox_os: raspbian
 ansible_user: pi
 
 client_facing_if: "wlan0"
-eth_facing_if: "eth0"
+eth_facing_if: "wlan1"
